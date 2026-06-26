@@ -18,7 +18,7 @@ app.use("/api/topics",   require("./routes/topicRoutes"));
 app.use("/api/progress", require("./routes/progressRoutes"));
 
 // ─── Health Check ─────────────────────────────────────────────
-app.get("/", (req, res) => res.json({ status: "DSA Sheet API is running 🚀" }));
+app.get("/api", (req, res) => res.json({ status: "DSA Sheet API is running 🚀" }));
 
 // ─── 404 Handler ──────────────────────────────────────────────
 app.use((req, res) => res.status(404).json({ message: "Route not found" }));
